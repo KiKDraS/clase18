@@ -8,15 +8,15 @@ interface Props {
   title?: string;
 }
 
-/* const task = {
+const task = {
   id: 1,
   title: "Primera Tarea",
   description: "Primera Tarea",
   completed: false,
-}; */
+};
 
 export const App = ({ title = "Default Title" }: Props): JSX.Element => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([task]);
 
   const generateId = (): number => new Date().getTime();
 
